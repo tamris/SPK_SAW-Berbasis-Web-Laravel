@@ -31,10 +31,11 @@
         <table class="min-w-full bg-white border border-gray-300 rounded-lg shadow-sm">
             <thead class="bg-blue-100">
                 <tr>
-                    <th class="border border-gray-300 py-3 px-6 text-left">No</th>
+                  
                     <th class="border border-gray-300 py-3 px-6 text-left">NIM</th>
                     <th class="border border-gray-300 py-3 px-6 text-left">Alternatif</th>
                     <th class="border border-gray-300 py-3 px-6 text-left">Nilai Akhir</th>
+                    <th class="border border-gray-300 py-3 px-6 text-left">Peringkat</th>
                 </tr>
             </thead>
             <tbody>
@@ -42,10 +43,11 @@
                 @foreach ($hasil as $alternatifId => $nilaiAkhir)
                     @php $alternatif = $alternatifs->find($alternatifId); @endphp
                     <tr class="hover:bg-blue-100">
-                        <td class="border border-gray-300 py-3 px-6">{{ $rank++ }}</td>
+                        
                         <td class="border border-gray-300 py-3 px-6">{{ $alternatif->nim }}</td>
                         <td class="border border-gray-300 py-3 px-6">{{ $alternatif->nama }}</td>
                         <td class="border border-gray-300 py-3 px-6 text-left">{{ number_format($nilaiAkhir, 4) }}</td>
+                        <td class="border border-gray-300 py-3 px-6">{{ $rank++ }}</td>
                     </tr>
                 @endforeach
             </tbody>

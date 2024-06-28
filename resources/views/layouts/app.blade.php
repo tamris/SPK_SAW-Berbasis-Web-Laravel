@@ -82,7 +82,7 @@
                         </li>
                         <li class="mb-2">
                             <a href="{{ route('saw.normalisasi') }}" class="flex items-center text-white hover:bg-[#3c3abb] px-4 py-4 rounded transition duration-200">
-                                <i class="fas fa-calculator mr-3"></i> Normalisasi
+                                <i class="fas fa-calculator mr-3"></i> Perhitungan
                             </a>
                         </li>
                     </ul>
