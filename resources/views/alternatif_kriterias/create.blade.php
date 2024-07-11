@@ -17,7 +17,7 @@
     <form action="{{ route('alternatif_kriterias.store') }}" method="POST">
         @csrf
         <div class="mb-4">
-            <label for="alternatif_id" class="block text-gray-700">Nama Siswa:</label>
+            <label for="alternatif_id" class="block text-gray-700">Nama Mahasiswa:</label>
             <select name="alternatif_id" id="alternatif_id" class="w-full mt-2 p-2 border rounded">
                 @foreach($alternatifs as $alternatif)
                     <option value="{{ $alternatif->id }}">{{ $alternatif->nama }}</option>

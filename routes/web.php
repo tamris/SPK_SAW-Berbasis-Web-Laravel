@@ -68,6 +68,12 @@ Route::middleware('auth')->group(function () {
     Route::post('/profile/update-password', [ProfileController::class, 'updatePassword'])->name('profile.updatePassword');
 });
 
+// routes/web.php
+use App\Http\Controllers\ContactController;
+
+Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
+
+
 // Socialite
 Route::get('/auth/redirect', [SocialiteController::class, 'redirect'])->name('auth.redirect');
 Route::get('/auth/google/callback', [SocialiteController::class, 'callback']);

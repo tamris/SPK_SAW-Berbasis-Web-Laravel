@@ -14,7 +14,7 @@ class Kriteria extends Model
 
     public function crips()
     {
-        return $this->hasMany(crips::class);
+        return $this->hasMany(Crips::class);
     }
 
     public function alternatifKriterias()

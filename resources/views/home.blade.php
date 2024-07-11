@@ -289,7 +289,7 @@
               <p>
                 Developer <br>
                 IND<br><br>
-                <strong>Email:</strong> sipados@gmail.com.com<br>
+                <strong>Email:</strong> trizqi711@gmail.com.com<br>
               </p>
               <div class="social-links mt-3">
                 <a href="https://x.com/rizzzqq_17?t=DCcg-XWq0TDX-Lq9MNXccg&s=09" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -319,15 +319,30 @@
             </ul>
           </div>
 
-          <div class="col-lg-4 col-md-6 footer-newsletter">
+          <div class="col-lg-4 col-md-6">
             <h4>Kontak Kami</h4>
-            <p></p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Kirim Email">
+            @if(session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
+            <form action="{{ route('contact.send') }}" method="POST">
+                @csrf
+                <div class="form-group mb-3">
+                    <input type="text" class="form-control" placeholder="Name" name="name" required>
+                </div>
+                <div class="form-group mb-3">
+                    <input type="email" class="form-control" placeholder="Email" name="email" required>
+                </div>
+                <div class="form-group mb-3">
+                    <textarea class="form-control" name="message" id="message" cols="30" rows="5" placeholder="Message" required></textarea>
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </div>
             </form>
-
           </div>
-
+          
         </div>
       </div>
     </div>
@@ -358,7 +373,7 @@
 
   <!-- Template Main JS File -->
   <script src="{{ asset('assets/js/main.js') }}"></script>
-
+  <script src="{{ asset('js/main.js') }}"></script>
 </body>
 
 </html>

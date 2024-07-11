@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ config('app.name', 'Decision Support System') }}</title>
+    <title>Sipados</title>
+    <link href="{{ asset('assets/img/favicons.png') }}" rel="icon">
+    <link href="{{ asset('assets/img/apple-touch-icons.png') }}" rel="apple-touch-icon">
     @vite('resources/css/app.css')
     
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
